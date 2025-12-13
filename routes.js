@@ -5,6 +5,9 @@ const Apoint_Object = require('./Controller/AppointmentController')
 router.get('/',(req,res)=>{
 res.render('home')
 })
+router.get('/contact',(req,res)=>{
+res.render('contact')
+})
 
 router.post('/submit_from',(req,res)=>{
     Apoint_Object.Add_appointment(req,res)

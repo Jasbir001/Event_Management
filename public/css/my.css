@@ -49,3 +49,22 @@
 .card:hover .card-img-top {
     transform: scale(1.1);
 }
+
+.donate{
+    animation:blinker 2s linear infinite;
+}
+@keyframes blinker{
+    50% {
+        opacity:0;
+    }
+}
+
+
+.hline{
+    color:red;
+
+}
+
+.hicone{
+    color:red;
+}
