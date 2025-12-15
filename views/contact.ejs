@@ -67,6 +67,15 @@
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                 </form>
+                <div>
+                    <% if(locals.msg)
+                    
+                    { %>  
+                        <h3><%= msg %></h3>
+                    <%}
+                    %>
+
+                </div>
             </div>
             <div class="col-sm-4">
             <img src="../public/image/girl_contact.jpg" class="img-fluid" style="height:100%">
