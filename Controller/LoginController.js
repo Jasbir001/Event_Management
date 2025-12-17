@@ -12,6 +12,11 @@ class Login
 
         }
     }
+    createuser(req,res)
+    {
+        if(req.method=="GET")
+            res.render('createuser')
+    }
 }
 
 
