@@ -24,7 +24,7 @@ router.use('/login',(req,res) =>{
 router.use('/useraccount',(req,res)=>{
     login_obj.createuser(req,res)
 })
-router.use('/event',(req,res)=>{
+router.get('/eventbooks',(req,res)=>{
     event_obj.eventbooked(req,res)
 })
 

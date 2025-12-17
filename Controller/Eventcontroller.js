@@ -2,9 +2,9 @@ class Event{
 
     eventbooked(req,res)
     {
-        if(req.method=="GET")
+        if(req.method=='GET')
             {
-            res.render('eventbooks')
+            res.render('eventbooked')
             }
         else{
 
