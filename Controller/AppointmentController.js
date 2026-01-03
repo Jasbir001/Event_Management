@@ -1,4 +1,5 @@
 const appointmentModal = require('../Modal/Appointment')
+const bookingModal = require('../Modal/booking')
 
 class AppointmentController{
     Add_appointment(req, res){
@@ -20,24 +21,31 @@ class AppointmentController{
                     res.render('Home',{msg:data.Name +" Appointment Booked Successfully"})
                 }
             })
-        }
+        };
     Add_booking(req,res){
+
+        if(req.method=='GET')
+        {
+            res.render('eventbooked')
+        }
+        else{
         const data = {
-            Name:req.body.name,
+            Name:req.body.naam,
             Email:req.body.email,
             Phone:req.body.phone,
             Time:req.body.time,
-            Type:req.body.type,
-            ApxSize:req.body.apxsize
+            Apxsize:req.body.apxsize,
         }
-        appointmentModal.create(data,(err)=>{
+        bookingModal.create(data,(err)=>{
                 if(err){
-                    res.render('eventbooked',{msg:"Error In Booking event!! Try Again"})
+                    res.render('eventbooked',{msg:"Error In Booking event!! Try Again"+err})
+                    console.log(err)
                 }
                 else{
-                    res.render('eventbooked',{msg:data.Name +"Event is Booked Successfully"})
+                    res.render('eventbooked',{msg:data.Name +" Event is Booked Successfully"})
                 }
             })
+        }
     }
 }
 

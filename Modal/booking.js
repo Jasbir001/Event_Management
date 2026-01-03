@@ -2,11 +2,10 @@ const db=require("../database/mydb")
 
 const Appointment= 
 { 
-    create : (data, callback)=>
+    create: (data, callback)=>
     {
-    const q = `insert into appointment (name, email, mobile, address, appointment_datetime, event_type) 
-    values ('${data.Name}','${data.Email}','${data.Phone}','${data.Address}','${data.Time}','${data.Event}')`
-
+    const q = `insert into booking (name, email, phone, time, apxsize) 
+    values ('${data.Name}','${data.Email}','${data.Phone}','${data.Time}','${data.Apxsize}')`
     db.query(q,callback)
     },
     // delete : (data, callback)=>
